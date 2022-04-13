@@ -10,3 +10,6 @@ data_*/
 
 # Addon-specific ignores
 addons/
+
+# Wakatime-specific ignores
+wakatime_logo.jpg
