@@ -11,6 +11,9 @@ func _ready():
 	box_price = Global.box_values[random_num.randi_range(0,10)]
 	print(box_price)
 	
+	Global.price += box_price
+	print("Total price: $" + str(Global.price))
+	
 	$RigidBody2D/Price.text = "$" + str(box_price)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,13 +22,13 @@ func _ready():
 
 
 func _on_RigidBody2D_body_entered(body):
-	print(self)
-	print("Dropped onto " + body.get_name())
-	rigid_entered = true
-#	self.move_local_y(25)
-
-	box_price = 0
 	if (body.get_name() == "Floor"):
-		Global.price -= float(box_price / 10)
+		rigid_entered = true
+		
+		if (box_price != 0):
+			box_price /= 10
+			
+			
+		Global.price -= float(box_price)
 		$RigidBody2D/Price.text = "$" + str(box_price)
 		print("Total price: $" + str(Global.price))
