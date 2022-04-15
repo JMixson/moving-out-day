@@ -14,3 +14,13 @@ func _physics_process(_delta):
 	
 	velocity = velocity.normalized()
 	move_and_slide(velocity * speed)
+
+func _process(delta):
+	if Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_right_d"):
+		$AnimatedSprite.play("rolling")
+		$AnimatedSprite.set_flip_h(false)
+	elif Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_left_a"):
+		$AnimatedSprite.play("rolling")
+		$AnimatedSprite.set_flip_h(true)
+	else:
+		$AnimatedSprite.play("idle")
