@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Sprites/level-1-map.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Box.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 221.5 )
@@ -48,6 +49,12 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
 position = Vector2( 975.5, 360 )
 shape = SubResource( 3 )
+
+[node name="Box" parent="." instance=ExtResource( 3 )]
+position = Vector2( 118, 402 )
+
+[node name="Box2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 118, 355 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 118, 438 )
