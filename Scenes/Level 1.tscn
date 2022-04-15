@@ -5,7 +5,7 @@
 [ext_resource path="res://Scenes/Box.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 221.5 )
+extents = Vector2( 26, 249.109 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 512, 10 )
@@ -28,11 +28,11 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
-position = Vector2( -11, 208.5 )
+position = Vector2( -26, 221 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
-position = Vector2( 1034, 210 )
+position = Vector2( 1050, 222.891 )
 shape = SubResource( 1 )
 
 [node name="Floor" type="StaticBody2D" parent="."]
