@@ -26,7 +26,7 @@ func _on_RigidBody2D_body_entered(body):
 		rigid_entered = true
 		
 		if (box_price != 0):
-			box_price /= 10
+			box_price /= 2
 			
 			
 		Global.price -= float(box_price)
