@@ -57,7 +57,6 @@ theme = ExtResource( 1 )
 text = "Extra Assets
 - Typeface: Changa
 - Music: Ludum Dare 38 - Track 6 by Abstraction
-- Click Sound Effect: Cursor Style #2 by ObsydianX
 - Box Drop Sound Effect: Hit Hurt #9 by Nintendo SFX Pack"
 __meta__ = {
 "_edit_use_anchors_": false
