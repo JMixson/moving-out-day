@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Countdown.gd" type="Script" id=1]
+[ext_resource path="res://top-ui-theme.tres" type="Theme" id=2]
+
+[node name="Countdown" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.0
+margin_top = -3.0
+margin_right = -860.0
+margin_bottom = -563.0
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 25.0 ],
+"_edit_use_anchors_": false
+}
+minutes = 5
+
+[node name="min" type="RichTextLabel" parent="."]
+margin_left = 15.0
+margin_top = 9.0
+margin_right = 67.0
+margin_bottom = 57.0
+text = "00 : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sec" type="RichTextLabel" parent="."]
+margin_left = 58.0
+margin_top = 9.0
+margin_right = 108.0
+margin_bottom = 59.0
+text = "00 : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dsec" type="RichTextLabel" parent="."]
+margin_left = 102.0
+margin_top = 9.0
+margin_right = 136.0
+margin_bottom = 58.0
+text = "00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
