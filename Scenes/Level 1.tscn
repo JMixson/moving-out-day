@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Sprites/level-1-map.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scripts/Level 1.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Top UI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Pause.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Ending.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 26, 303 )
@@ -71,5 +72,12 @@ margin_bottom = 2.0
 
 [node name="Pause" parent="." instance=ExtResource( 6 )]
 visible = false
+
+[node name="Ending" parent="." instance=ExtResource( 7 )]
+pause_mode = 2
+margin_left = -5.0
+margin_top = -35.0
+margin_right = -5.0
+margin_bottom = -35.0
 
 [connection signal="body_entered" from="Door" to="." method="_on_Door_body_entered"]
