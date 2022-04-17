@@ -67,11 +67,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Quit_Btn" type="Button" parent="."]
+[node name="Credits_Btn" type="Button" parent="."]
 margin_left = 499.0
 margin_top = 288.0
 margin_right = 684.0
 margin_bottom = 335.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 1 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit_Btn" type="Button" parent="."]
+margin_left = 400.0
+margin_top = 356.0
+margin_right = 585.0
+margin_bottom = 403.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
 text = "Quit"
@@ -82,4 +94,5 @@ __meta__ = {
 [connection signal="pressed" from="Continue_Btn" to="." method="_on_Continue_Btn_pressed"]
 [connection signal="pressed" from="Restart_Btn" to="." method="_on_Restart_Btn_pressed"]
 [connection signal="pressed" from="Menu_Btn" to="." method="_on_Menu_Btn_pressed"]
+[connection signal="pressed" from="Credits_Btn" to="." method="_on_Credits_Btn_pressed"]
 [connection signal="pressed" from="Quit_Btn" to="." method="_on_Quit_Btn_pressed"]

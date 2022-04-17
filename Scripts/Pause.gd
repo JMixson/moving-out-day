@@ -29,6 +29,10 @@ func _on_Restart_Btn_pressed():
 func _on_Menu_Btn_pressed():
 	Global.price = 0
 	get_tree().change_scene("res://Scenes/Main Menu.tscn")
+	
+func _on_Credits_Btn_pressed():
+	Global.price = 0
+	get_tree().change_scene("res://Scenes/Credits.tscn")
 
 func _on_Quit_Btn_pressed():
 	get_tree().quit()
