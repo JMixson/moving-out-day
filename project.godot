@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Scripts/Global.gd"
+BgMusic="*res://Scenes/Bg Music.tscn"
 
 [editor_plugins]
 

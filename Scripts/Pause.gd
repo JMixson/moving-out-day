@@ -36,3 +36,9 @@ func _on_Credits_Btn_pressed():
 
 func _on_Quit_Btn_pressed():
 	get_tree().quit()
+	
+func _on_Music_Toggle_pressed():
+	if BgMusic.playing:
+		BgMusic.stop()
+	else:
+		BgMusic.play()

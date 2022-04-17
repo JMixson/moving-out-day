@@ -27,6 +27,7 @@ func _ready():
 func _on_RigidBody2D_body_entered(body):
 	if (body.get_name() == "Floor"):
 		rigid_entered = true
+		$Drop_Sound.play()
 		
 		if (box_price != 0):
 			box_price /= 2
