@@ -31,7 +31,7 @@ shape = SubResource( 1 )
 [node name="Value" type="RichTextLabel" parent="RigidBody2D"]
 margin_left = -14.0
 margin_top = -13.0
-margin_right = 19.0
+margin_right = 24.0
 margin_bottom = 8.0
 theme = ExtResource( 3 )
 text = "$550"
