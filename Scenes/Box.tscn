@@ -28,7 +28,7 @@ texture = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource( 1 )
 
-[node name="Price" type="RichTextLabel" parent="RigidBody2D"]
+[node name="Value" type="RichTextLabel" parent="RigidBody2D"]
 margin_left = -14.0
 margin_top = -13.0
 margin_right = 19.0

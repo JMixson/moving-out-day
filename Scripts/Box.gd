@@ -14,11 +14,11 @@ func _ready():
 	Global.price += box_price
 	print("Total price: $" + str(Global.price))
 	
-	$RigidBody2D/Price.text = "$" + str(box_price)
+	$RigidBody2D/Value.text = "$" + str(box_price)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-#	$Price.text = str(box_price)
+#	$Value.text = str(box_price)
 
 
 func _on_RigidBody2D_body_entered(body):
@@ -30,5 +30,5 @@ func _on_RigidBody2D_body_entered(body):
 			
 			
 		Global.price -= float(box_price)
-		$RigidBody2D/Price.text = "$" + str(box_price)
+		$RigidBody2D/Value.text = "$" + str(box_price)
 		print("Total price: $" + str(Global.price))
