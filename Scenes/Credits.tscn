@@ -1,0 +1,104 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://credits-theme.tres" type="Theme" id=1]
+[ext_resource path="res://menu-theme.tres" type="Theme" id=2]
+[ext_resource path="res://Assets/Branding/GWJ-Full-Logo.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Credits.gd" type="Script" id=4]
+
+[node name="Credits" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.145098, 0.113725, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Team" type="RichTextLabel" parent="."]
+margin_left = 283.0
+margin_top = 48.0
+margin_right = 474.0
+margin_bottom = 585.0
+theme = ExtResource( 1 )
+text = "Team
+- Amber Mixson
+- Jasmine Mixson
+- Nia Mixson
+
+Artist
+- Nia Mixson
+
+Beta Tester
+- Tony Mixson
+
+Develper
+- Jasmine Mixson
+
+Prep Leader
+- Amber Mixson"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Assets" type="RichTextLabel" parent="."]
+margin_left = 542.0
+margin_top = 49.0
+margin_right = 733.0
+margin_bottom = 586.0
+theme = ExtResource( 1 )
+text = "Extra Assets
+- Typeface: Changa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu_Btn" type="Button" parent="."]
+margin_left = 629.0
+margin_top = 526.0
+margin_right = 804.0
+margin_bottom = 573.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 2 )
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Q_Btn" type="Button" parent="."]
+margin_left = 824.0
+margin_top = 527.0
+margin_right = 999.0
+margin_bottom = 574.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 2 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gwj-Full-Logo" type="Sprite" parent="."]
+position = Vector2( 119.383, 120.875 )
+scale = Vector2( 0.197384, 0.197384 )
+texture = ExtResource( 3 )
+
+[node name="Wild Jam" type="RichTextLabel" parent="."]
+margin_left = 31.0
+margin_top = 228.0
+margin_right = 222.0
+margin_bottom = 298.0
+theme = ExtResource( 1 )
+text = "Submission for the 2022 Godot Wild Jam"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Menu_Btn" to="." method="_on_Menu_Btn_pressed"]
+[connection signal="pressed" from="Q_Btn" to="." method="_on_Q_Btn_pressed"]
