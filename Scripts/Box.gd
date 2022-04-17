@@ -14,6 +14,9 @@ func _ready():
 	Global.price += box_price
 	print("Total price: $" + str(Global.price))
 	
+	Global.box_num += 1
+	print("Boxes: " + str(Global.box_num))
+	
 	$RigidBody2D/Value.text = "$" + str(box_price)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
