@@ -117,8 +117,6 @@ margin_right = -5.0
 margin_bottom = -35.0
 
 [node name="Pause" parent="Menus" instance=ExtResource( 6 )]
-margin_top = 70.0
-margin_bottom = 70.0
 
 [node name="Node2D" type="Node2D" parent="."]
 
