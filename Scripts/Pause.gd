@@ -1,19 +1,13 @@
 extends Control
 
-var is_paused = false
-
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
-		if !get_tree().paused:
-			visible = true
-			pause()
-		else:
+		if (visible == true):
 			visible = false
 			resume()
-	
-func pause():
-	get_tree().set_deferred("paused", true)
-	
+		else:
+			visible = true
+
 func resume():
 	get_tree().set_deferred("paused", false)
 
