@@ -27,9 +27,6 @@ func _on_Menu_Btn_pressed():
 func _on_Credits_Btn_pressed():
 	Global.price = 0
 	get_tree().change_scene("res://Scenes/Credits.tscn")
-
-func _on_Quit_Btn_pressed():
-	get_tree().quit()
 	
 func _on_Music_Toggle_pressed():
 	if BgMusic.playing:
