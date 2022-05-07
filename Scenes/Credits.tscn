@@ -74,14 +74,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Q_Btn" type="Button" parent="."]
+[node name="R_Btn" type="Button" parent="."]
 margin_left = 824.0
 margin_top = 527.0
 margin_right = 999.0
 margin_bottom = 574.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 2 )
-text = "Quit"
+text = "Restart"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -103,4 +103,4 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Menu_Btn" to="." method="_on_Menu_Btn_pressed"]
-[connection signal="pressed" from="Q_Btn" to="." method="_on_Q_Btn_pressed"]
+[connection signal="pressed" from="R_Btn" to="." method="_on_R_Btn_pressed"]
