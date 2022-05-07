@@ -51,10 +51,10 @@ __meta__ = {
 }
 
 [node name="Play" type="Button" parent="."]
-margin_left = 507.0
-margin_top = 200.0
-margin_right = 806.0
-margin_bottom = 247.0
+margin_left = 510.0
+margin_top = 227.0
+margin_right = 809.0
+margin_bottom = 274.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 3 )
 text = "Play"
@@ -63,10 +63,10 @@ __meta__ = {
 }
 
 [node name="Credits" type="Button" parent="."]
-margin_left = 507.0
-margin_top = 262.0
-margin_right = 806.0
-margin_bottom = 309.0
+margin_left = 510.0
+margin_top = 289.0
+margin_right = 809.0
+margin_bottom = 336.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 3 )
 text = "Credits"
@@ -74,18 +74,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Quit" type="Button" parent="."]
-margin_left = 507.0
-margin_top = 327.0
-margin_right = 806.0
-margin_bottom = 374.0
-mouse_default_cursor_shape = 2
-theme = ExtResource( 3 )
-text = "Quit"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

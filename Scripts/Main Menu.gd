@@ -6,6 +6,3 @@ func _on_Play_pressed():
 
 func _on_Credits_pressed():
 	get_tree().change_scene("res://Scenes/Credits.tscn")
-
-func _on_Quit_pressed():
-	get_tree().quit()

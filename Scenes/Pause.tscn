@@ -80,23 +80,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Quit_Btn" type="Button" parent="."]
-margin_left = 400.0
-margin_top = 356.0
-margin_right = 585.0
-margin_bottom = 403.0
-mouse_default_cursor_shape = 2
-theme = ExtResource( 1 )
-text = "Quit"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Music_Toggle" type="CheckButton" parent="."]
-margin_left = 392.0
-margin_top = 457.0
-margin_right = 592.0
-margin_bottom = 504.0
+margin_left = 390.0
+margin_top = 357.0
+margin_right = 590.0
+margin_bottom = 404.0
 theme = ExtResource( 1 )
 pressed = true
 text = "Music"
@@ -109,5 +97,4 @@ __meta__ = {
 [connection signal="pressed" from="Restart_Btn" to="." method="_on_Restart_Btn_pressed"]
 [connection signal="pressed" from="Menu_Btn" to="." method="_on_Menu_Btn_pressed"]
 [connection signal="pressed" from="Credits_Btn" to="." method="_on_Credits_Btn_pressed"]
-[connection signal="pressed" from="Quit_Btn" to="." method="_on_Quit_Btn_pressed"]
 [connection signal="pressed" from="Music_Toggle" to="." method="_on_Music_Toggle_pressed"]
