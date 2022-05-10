@@ -6,9 +6,10 @@
 [ext_resource path="res://Assets/Audio/box-drop-sound.wav" type="AudioStream" id=4]
 
 [sub_resource type="PhysicsMaterial" id=2]
-friction = 3.0
+friction = 150.0
 rough = true
 bounce = 0.1
+absorbent = true
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 24 )
@@ -17,11 +18,12 @@ extents = Vector2( 30, 24 )
 script = ExtResource( 2 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-mass = 25.5102
+mass = 10.2041
 physics_material_override = SubResource( 2 )
-gravity_scale = 15.0
+gravity_scale = 7.0
 contacts_reported = 1
 contact_monitor = true
+sleeping = true
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D"]
 texture = ExtResource( 1 )
