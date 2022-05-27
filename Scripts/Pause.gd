@@ -16,13 +16,14 @@ func _on_Continue_Btn_pressed():
 	resume()
 
 func _on_Restart_Btn_pressed():
-	Global.restart_settings()
-	get_tree().change_scene("res://Scenes/Level 1.tscn")
+	Global.price = 0
+	Global.box_num = 0
+	get_tree().change_scene("res://Scenes/Level.tscn")
 	resume()
 
 func _on_Menu_Btn_pressed():
 	Global.restart_settings()
-	get_tree().change_scene("res://Scenes/Main Menu.tscn")
+	get_tree().change_scene("res://Scenes/Main_Menu.tscn")
 	
 func _on_Credits_Btn_pressed():
 	Global.restart_settings()

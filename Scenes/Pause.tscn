@@ -51,7 +51,7 @@ margin_right = 684.0
 margin_bottom = 267.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
-text = "Restart"
+text = "Restart Level"
 __meta__ = {
 "_edit_use_anchors_": false
 }
