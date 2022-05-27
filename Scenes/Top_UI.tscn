@@ -2,9 +2,9 @@
 
 [ext_resource path="res://top-ui-theme.tres" type="Theme" id=1]
 [ext_resource path="res://Scenes/Countdown.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/Top UI.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Top_UI.gd" type="Script" id=3]
 
-[node name="Top UI" type="Control"]
+[node name="Top_UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 1.0

@@ -7,7 +7,8 @@ var startingY = 400
 
 func _ready():
 	set_process(true)
-	spawn_boxes(2)
+	spawn_boxes(Global.level_num + 8)
+	
 
 func _process(delta):
 	if (Global.box_num == 0):
@@ -19,6 +20,8 @@ func spawn_boxes(num):
 		box_container.add_child(b)
 		b.position = Vector2(118, startingY)
 		startingY -= 50
+		
+		$Menus/Ending/Box_Num.text = "Boxes in Level: " + str(Global.box_num)
 
 func _on_Door_body_entered(body):
 	if (body.get_name() == "RigidBody2D"):

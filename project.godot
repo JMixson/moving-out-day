@@ -11,13 +11,13 @@ config_version=4
 [application]
 
 config/name="Game"
-run/main_scene="res://Scenes/Main Menu.tscn"
+run/main_scene="res://Scenes/Main_Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Global="*res://Scripts/Global.gd"
-BgMusic="*res://Scenes/Bg Music.tscn"
+BgMusic="*res://Scenes/Bg_Music.tscn"
 
 [editor_plugins]
 
