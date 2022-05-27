@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Sprites/level-1-map.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -17,6 +17,9 @@ extents = Vector2( 512, 35 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 44, 62.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 801.5, 52 )
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource( 4 )
@@ -55,6 +58,10 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
 position = Vector2( 979, 350.5 )
 shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Door"]
+position = Vector2( 514.5, 599 )
+shape = SubResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 118, 438 )
