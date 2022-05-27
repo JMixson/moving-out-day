@@ -7,17 +7,17 @@
 [node name="Top UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = -520.0
+margin_top = 1.0
+margin_bottom = -519.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 1.0
-margin_top = -2.0
-margin_right = 1026.0
-margin_bottom = 60.0
+margin_top = -1.0
+margin_right = 1024.0
+margin_bottom = 61.0
 color = Color( 0.698039, 0.494118, 0.345098, 1 )
 __meta__ = {
 "_edit_lock_": true,
