@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://menu-theme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/Ending.gd" type="Script" id=2]
+[ext_resource path="res://top-ui-theme.tres" type="Theme" id=3]
 
 [node name="Ending" type="Control"]
 visible = false
@@ -18,55 +19,72 @@ margin_left = 249.0
 margin_top = 120.0
 margin_right = 761.0
 margin_bottom = 570.0
-color = Color( 0.0784314, 0.00784314, 0.00784314, 0.803922 )
+color = Color( 0.0784314, 0.00784314, 0.00784314, 0.933333 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Total" type="RichTextLabel" parent="."]
-margin_left = 326.0
-margin_top = 131.0
-margin_right = 693.0
-margin_bottom = 237.0
+[node name="Heading" type="Label" parent="."]
+margin_left = 249.0
+margin_top = 118.0
+margin_right = 761.0
+margin_bottom = 257.0
 theme = ExtResource( 1 )
-text = "Total Price"
-scroll_active = false
+text = "Level 1 Total"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Box_Num" type="Label" parent="."]
+visible = false
+margin_left = 249.0
+margin_top = 364.0
+margin_right = 761.0
+margin_bottom = 405.0
+theme = ExtResource( 3 )
+text = "Boxes: #"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Ending_Price" type="Label" parent="."]
-margin_left = 360.0
-margin_top = 270.0
-margin_right = 632.0
-margin_bottom = 409.0
+margin_left = 247.0
+margin_top = 245.0
+margin_right = 757.0
+margin_bottom = 407.0
 theme = ExtResource( 1 )
 text = "$100"
 align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level_Btn" type="Button" parent="."]
+margin_left = 316.0
+margin_top = 429.0
+margin_right = 685.0
+margin_bottom = 476.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 1 )
+text = "Next Level"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="R_Btn" type="Button" parent="."]
 margin_left = 316.0
-margin_top = 454.0
-margin_right = 483.0
-margin_bottom = 501.0
+margin_top = 485.0
+margin_right = 685.0
+margin_bottom = 532.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
-text = "Restart"
+text = "Restart Level"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="C_Btn" type="Button" parent="."]
-margin_left = 519.0
-margin_top = 454.0
-margin_right = 686.0
-margin_bottom = 501.0
-mouse_default_cursor_shape = 2
-theme = ExtResource( 1 )
-text = "Credits"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
+[connection signal="pressed" from="Level_Btn" to="." method="_on_Level_Btn_pressed"]
 [connection signal="pressed" from="R_Btn" to="." method="_on_R_Btn_pressed"]
-[connection signal="pressed" from="C_Btn" to="." method="_on_C_Btn_pressed"]
