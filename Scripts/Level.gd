@@ -7,7 +7,7 @@ var startingY = 400
 
 func _ready():
 	set_process(true)
-	spawn_boxes(Global.level_num + 8)
+	spawn_boxes(Global.level_num + 1)
 	
 
 func _process(delta):
