@@ -1,5 +1,12 @@
 extends Control
 
+func _ready():
+	if Global.drop_sound_on == false:
+		$Sound_Toggle.pressed = false
+	
+	if !BgMusic.playing:
+		$Music_Toggle.pressed = false
+
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		if (visible == true):
@@ -20,17 +27,30 @@ func _on_Restart_Btn_pressed():
 	Global.box_num = 0
 	get_tree().change_scene("res://Scenes/Level.tscn")
 	resume()
+	
+	if Global.drop_sound_on == false:
+		$Sound_Toggle.pressed = true
+#		print($Sound_Toggle.pressed)
 
 func _on_Menu_Btn_pressed():
 	Global.restart_settings()
 	get_tree().change_scene("res://Scenes/Main_Menu.tscn")
-	
-func _on_Credits_Btn_pressed():
-	Global.restart_settings()
-	get_tree().change_scene("res://Scenes/Credits.tscn")
-	
+
 func _on_Music_Toggle_pressed():
 	if BgMusic.playing:
 		BgMusic.stop()
 	else:
 		BgMusic.play()
+
+func _on_Sound_Toggle_pressed():
+	if Global.drop_sound_on:
+		Global.drop_sound_on = false
+	else:
+		Global.drop_sound_on = true
+
+func _on_Game_Restart_Btn_pressed():
+	Global.restart_settings()
+	get_tree().change_scene("res://Scenes/Level.tscn")
+	resume()
+
+
