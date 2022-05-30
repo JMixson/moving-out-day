@@ -31,3 +31,5 @@ func _on_Timer_timeout():
 	if dseconds > 0:
 		dseconds -= 1
 	
+	if minutes == 0 and seconds == 0 and dseconds == 0:
+		Global.game_end = true

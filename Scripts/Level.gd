@@ -16,6 +16,9 @@ func _process(delta):
 		
 	if (Global.level_num > 1):
 		$Dialog_Panel/Dialog_Label.text = "Boxes Left: " + str(Global.box_num)
+		
+	if (Global.game_end):
+		$Menus/Ending.visible = true
 
 func spawn_boxes(num):
 	for i in range(num):

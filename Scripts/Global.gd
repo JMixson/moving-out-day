@@ -10,7 +10,10 @@ var level_num = 1
 
 var drop_sound_on = true
 
+var game_end = false
+
 func restart_settings():
 	Global.price = 0
 	Global.box_num = 0
 	Global.level_num = 1
+	Global.game_end = false

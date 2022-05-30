@@ -12,11 +12,13 @@ func resume():
 func _on_R_Btn_pressed():
 	Global.price = 0
 	Global.box_num = 0
+	Global.game_end = false
 	get_tree().change_scene("res://Scenes/Level.tscn")
 	resume()
 
 func _on_Level_Btn_pressed():
 	Global.level_num += 1
 	Global.box_num = 0
+	Global.game_end = false
 	get_tree().change_scene("res://Scenes/Level.tscn")
 	resume()
