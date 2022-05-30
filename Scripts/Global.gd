@@ -8,6 +8,8 @@ var box_num = 0
 
 var level_num = 1
 
+var drop_sound_on = true
+
 func restart_settings():
 	Global.price = 0
 	Global.box_num = 0
