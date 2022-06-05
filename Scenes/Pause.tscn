@@ -18,6 +18,7 @@ margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 0.517647, 0.329412, 0.360784, 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -51,16 +52,16 @@ margin_right = 684.0
 margin_bottom = 267.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
-text = "Restart"
+text = "Restart Level"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Menu_Btn" type="Button" parent="."]
-margin_left = 296.0
-margin_top = 287.0
-margin_right = 481.0
-margin_bottom = 334.0
+margin_left = 499.0
+margin_top = 286.0
+margin_right = 684.0
+margin_bottom = 333.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
 text = "Menu"
@@ -68,23 +69,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Credits_Btn" type="Button" parent="."]
-margin_left = 499.0
-margin_top = 288.0
-margin_right = 684.0
-margin_bottom = 335.0
+[node name="Game_Restart_Btn" type="Button" parent="."]
+margin_left = 295.0
+margin_top = 286.0
+margin_right = 480.0
+margin_bottom = 333.0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
-text = "Credits"
+text = "Restart Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Music_Toggle" type="CheckButton" parent="."]
-margin_left = 390.0
-margin_top = 357.0
-margin_right = 590.0
-margin_bottom = 404.0
+margin_left = 357.0
+margin_top = 420.0
+margin_right = 613.0
+margin_bottom = 467.0
 theme = ExtResource( 1 )
 pressed = true
 text = "Music"
@@ -93,8 +94,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sound_Toggle" type="CheckButton" parent="."]
+margin_left = 357.0
+margin_top = 483.0
+margin_right = 613.0
+margin_bottom = 530.0
+theme = ExtResource( 1 )
+pressed = true
+text = "Sound Effects"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="Continue_Btn" to="." method="_on_Continue_Btn_pressed"]
 [connection signal="pressed" from="Restart_Btn" to="." method="_on_Restart_Btn_pressed"]
 [connection signal="pressed" from="Menu_Btn" to="." method="_on_Menu_Btn_pressed"]
-[connection signal="pressed" from="Credits_Btn" to="." method="_on_Credits_Btn_pressed"]
+[connection signal="pressed" from="Game_Restart_Btn" to="." method="_on_Game_Restart_Btn_pressed"]
 [connection signal="pressed" from="Music_Toggle" to="." method="_on_Music_Toggle_pressed"]
+[connection signal="pressed" from="Sound_Toggle" to="." method="_on_Sound_Toggle_pressed"]

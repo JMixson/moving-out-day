@@ -4,12 +4,11 @@ func resume():
 	get_tree().set_deferred("paused", false)
 
 func _on_Menu_Btn_pressed():
-	get_tree().change_scene("res://Scenes/Main Menu.tscn")
+	get_tree().change_scene("res://Scenes/Main_Menu.tscn")
 
 func _on_R_Btn_pressed():
-	Global.price = 0
-	Global.box_num = 0
-	get_tree().change_scene("res://Scenes/Level 1.tscn")
+	Global.restart_settings()
+	get_tree().change_scene("res://Scenes/Level.tscn")
 	resume()
 
 

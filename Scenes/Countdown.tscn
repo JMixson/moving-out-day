@@ -6,10 +6,8 @@
 [node name="Countdown" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -3.0
-margin_top = -3.0
-margin_right = -860.0
-margin_bottom = -563.0
+margin_right = -891.0
+margin_bottom = -559.0
 theme = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -19,31 +17,30 @@ __meta__ = {
 minutes = 5
 
 [node name="min" type="RichTextLabel" parent="."]
-margin_left = 15.0
-margin_top = 9.0
-margin_right = 67.0
-margin_bottom = 57.0
+margin_right = 43.0
+margin_bottom = 30.0
 text = "00 : "
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="sec" type="RichTextLabel" parent="."]
-margin_left = 58.0
-margin_top = 9.0
-margin_right = 108.0
-margin_bottom = 59.0
+margin_left = 43.0
+margin_right = 86.0
+margin_bottom = 30.0
 text = "00 : "
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="dsec" type="RichTextLabel" parent="."]
-margin_left = 102.0
-margin_top = 9.0
-margin_right = 136.0
-margin_bottom = 58.0
+margin_left = 86.0
+margin_right = 116.0
+margin_bottom = 30.0
 text = "00"
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
