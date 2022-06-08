@@ -5,20 +5,18 @@ func _ready():
 
 func _process(_delta):
 	$Ending_Price.text = "$" + str(Global.price)
+#	Global.total_money += Global.price
 
 func resume():
 	get_tree().set_deferred("paused", false)
 
 func _on_R_Btn_pressed():
-	Global.price = 0
-	Global.box_num = 0
-	Global.game_end = false
+	Global.restart_level_settings()
 	get_tree().change_scene("res://Scenes/Level.tscn")
 	resume()
 
 func _on_Level_Btn_pressed():
 	Global.level_num += 1
-	Global.box_num = 0
-	Global.game_end = false
+	Global.restart_level_settings()
 	get_tree().change_scene("res://Scenes/Level.tscn")
 	resume()

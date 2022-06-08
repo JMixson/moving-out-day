@@ -45,7 +45,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Restart_Btn" type="Button" parent="."]
+[node name="Level_Restart_Btn" type="Button" parent="."]
 margin_left = 499.0
 margin_top = 220.0
 margin_right = 684.0
@@ -108,7 +108,8 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Continue_Btn" to="." method="_on_Continue_Btn_pressed"]
-[connection signal="pressed" from="Restart_Btn" to="." method="_on_Restart_Btn_pressed"]
+[connection signal="pressed" from="Level_Restart_Btn" to="." method="_on_Restart_Btn_pressed"]
+[connection signal="pressed" from="Level_Restart_Btn" to="." method="_on_Level_Restart_Btn_pressed"]
 [connection signal="pressed" from="Menu_Btn" to="." method="_on_Menu_Btn_pressed"]
 [connection signal="pressed" from="Game_Restart_Btn" to="." method="_on_Game_Restart_Btn_pressed"]
 [connection signal="pressed" from="Music_Toggle" to="." method="_on_Music_Toggle_pressed"]

@@ -1,0 +1,129 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://menu-theme.tres" type="Theme" id=1]
+[ext_resource path="res://top-ui-theme.tres" type="Theme" id=2]
+[ext_resource path="res://Scripts/Totals.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Fonts/semi-heading_dynamicfont.tres" type="DynamicFont" id=4]
+
+[node name="Totals" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+pause_mode = 2
+margin_left = 249.0
+margin_top = 120.0
+margin_right = 761.0
+margin_bottom = 570.0
+color = Color( 0.0784314, 0.00784314, 0.00784314, 0.933333 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Heading" type="Label" parent="."]
+margin_left = 249.0
+margin_top = 118.0
+margin_right = 761.0
+margin_bottom = 257.0
+theme = ExtResource( 1 )
+text = "Final Totals"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Paycheck" type="Label" parent="."]
+margin_left = 243.0
+margin_top = 246.0
+margin_right = 755.0
+margin_bottom = 294.0
+theme = ExtResource( 2 )
+custom_fonts/font = ExtResource( 4 )
+text = "Paycheck: $1000"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Current_Level" type="Label" parent="."]
+margin_left = 247.0
+margin_top = 323.0
+margin_right = 759.0
+margin_bottom = 371.0
+theme = ExtResource( 2 )
+text = "Current Level: #"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Boxes_Collected" type="Label" parent="."]
+margin_left = 247.0
+margin_top = 364.0
+margin_right = 759.0
+margin_bottom = 412.0
+theme = ExtResource( 2 )
+text = "Boxes Collected: #"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ending_Price" type="Label" parent="."]
+visible = false
+margin_left = 247.0
+margin_top = 245.0
+margin_right = 757.0
+margin_bottom = 384.0
+theme = ExtResource( 1 )
+text = "$100"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level_Btn" type="Button" parent="."]
+visible = false
+margin_left = 317.0
+margin_top = 429.0
+margin_right = 686.0
+margin_bottom = 476.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 1 )
+text = "Next Level"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="R_Btn" type="Button" parent="."]
+margin_left = 316.0
+margin_top = 429.0
+margin_right = 685.0
+margin_bottom = 476.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 1 )
+text = "Restart Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C_Btn" type="Button" parent="."]
+margin_left = 316.0
+margin_top = 485.0
+margin_right = 685.0
+margin_bottom = 532.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 1 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="R_Btn" to="." method="_on_R_Btn_pressed"]
+[connection signal="pressed" from="C_Btn" to="." method="_on_C_Btn_pressed"]
