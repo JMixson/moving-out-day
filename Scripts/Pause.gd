@@ -22,19 +22,16 @@ func _on_Continue_Btn_pressed():
 	visible = false
 	resume()
 
-func _on_Restart_Btn_pressed():
-	Global.price = 0
-	Global.box_num = 0
-	Global.game_end = false
+func _on_Level_Restart_Btn_pressed():
+	Global.restart_level_settings()
 	get_tree().change_scene("res://Scenes/Level.tscn")
 	resume()
 	
 	if Global.drop_sound_on == false:
 		$Sound_Toggle.pressed = true
-#		print($Sound_Toggle.pressed)
 
 func _on_Menu_Btn_pressed():
-	Global.restart_settings()
+	Global.restart_game_settings()
 	get_tree().change_scene("res://Scenes/Main_Menu.tscn")
 
 func _on_Music_Toggle_pressed():
@@ -50,7 +47,7 @@ func _on_Sound_Toggle_pressed():
 		Global.drop_sound_on = true
 
 func _on_Game_Restart_Btn_pressed():
-	Global.restart_settings()
+	Global.restart_game_settings()
 	get_tree().change_scene("res://Scenes/Level.tscn")
 	resume()
 
