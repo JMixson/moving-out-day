@@ -3,7 +3,7 @@ extends CanvasLayer
 var num = 0
 
 func _process(_delta):
-	if Input.is_action_just_pressed("ui_cancel") or ($Pause.visible == true) or ($Ending.visible == true):
+	if Input.is_action_just_pressed("ui_cancel") or ($Pause.visible == true) or ($Ending.visible == true) or Global.game_end:
 		if !get_tree().paused:
 			pause()
 		else:
